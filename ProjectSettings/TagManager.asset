@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CameraTrigger
+  - RoomBoundary
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -11,16 +14,16 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Cinemachine
+  - Ground
+  - Platform
+  - Trap
+  - Player
+  - Player_Fallthrough
+  - Enemy
+  - Decorations
+  - Checkpoint
   - 
   - 
   - 
@@ -38,6 +41,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 689463061
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Room 1
+    uniqueID: 2970472157
+    locked: 0
+  - name: Room 2
+    uniqueID: 2177145715
+    locked: 0
+  - name: Room 3
+    uniqueID: 2087662717
+    locked: 0
+  - name: Player
+    uniqueID: 1437306581
+    locked: 0
+  - name: UI
+    uniqueID: 2129258021
     locked: 0
