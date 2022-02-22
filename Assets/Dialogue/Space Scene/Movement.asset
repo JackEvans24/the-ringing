@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
-  m_Name: Checkpoint
+  m_Name: Movement
   m_EditorClassIdentifier: 
   Passive: 1
   PassiveTimeout: 1.2
   Events:
   - Character: Autopilot
-    Text: THESE ARROW SIGNS ARE CHECKPOINTS, IN CASE SOMETHING BAD HAPPENS
+    Text: YOU CAN USE THE A AND D KEYS TO MOVE
   - Character: Jarett
-    Text: What do you mean, "something bad"?
+    Text: I know how to move, Autopilot

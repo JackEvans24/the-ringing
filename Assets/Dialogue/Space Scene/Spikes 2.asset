@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
-  m_Name: Spikes
+  m_Name: Spikes 2
   m_EditorClassIdentifier: 
   Passive: 1
-  PassiveTimeout: 2
+  PassiveTimeout: 1.2
   Events:
-  - Character: Jerr
-    Text: Did we always have this many spikes?
+  - Character: Jarett
+    Text: What do we even need spikes for?
   - Character: Autopilot
-    Text: Of course, Jerr. They didn't just appear out of nowhere.
+    Text: YOU'RE WORRYING A LOT ABOUT THE SPIKES
+  - Character: Autopilot
+    Text: YOU COULD ALWAYS GO BACK TO YOUR SEAT
