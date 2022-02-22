@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
 
     private PlayerController player;
     private Dialogue currentDialogue;
+    private Queue<Dialogue> awaitingDialogues = new Queue<Dialogue>();
     private Queue<DialogueEvent> awaitingEvents = new Queue<DialogueEvent>();
 
     private bool playerCouldMove;
@@ -58,16 +59,31 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        this.currentDialogue = dialogue;
+        this.awaitingDialogues.Enqueue(dialogue);
+        StartCoroutine(NextDialog());
+    }
 
-        if (!dialogue.Passive)
+    private IEnumerator NextDialog()
+    {
+        if (this.currentDialogue != null)
+            yield break;
+
+        if (this.awaitingDialogues.Count == 0)
+        {
+            yield return CloseDialogBox();
+            yield break;
+        }
+
+        this.currentDialogue = this.awaitingDialogues.Dequeue();
+
+        if (!this.currentDialogue.Passive)
         {
             this.playerCouldMove = this.player.CanMove;
             this.player.CanMove = false;
         }
 
         this.awaitingEvents.Clear();
-        foreach (var ev in dialogue.Events)
+        foreach (var ev in this.currentDialogue.Events)
             this.awaitingEvents.Enqueue(ev);
 
         StartCoroutine(NextEvent());
@@ -77,7 +93,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (awaitingEvents.Count == 0)
         {
-            StartCoroutine(EndDialog());
+            EndDialog();
             yield break;
         }
 
@@ -152,13 +168,13 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(dialogFadeTime);
     }
 
-    private IEnumerator EndDialog()
+    private void EndDialog()
     {
-        yield return CloseDialogBox();
-
         if (!this.currentDialogue.Passive)
             player.CanMove = this.playerCouldMove;
 
         this.currentDialogue = null;
+
+        StartCoroutine(this.NextDialog());
     }
 }
