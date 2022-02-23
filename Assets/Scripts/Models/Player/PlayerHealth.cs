@@ -19,6 +19,7 @@ namespace Assets.Scripts.Models.Player
         [SerializeField] private LayerMask deathLayer;
 
         [Header("Events")]
+        [SerializeField] private UnityEvent onHurt;
         [SerializeField] private UnityEvent onDeath;
         [SerializeField] private UnityEvent onReset;
 
@@ -77,6 +78,8 @@ namespace Assets.Scripts.Models.Player
 
             this.CurrentHealth = (int)Math.Max(0f, this.CurrentHealth - damage);
             this.IsHurt = true;
+
+            this.onHurt?.Invoke();
 
             this.healthBar.UpdateHealth(this);
 
