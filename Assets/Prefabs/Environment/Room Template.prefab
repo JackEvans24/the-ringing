@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 224800056171919211}
   - component: {fileID: 224800056171919209}
   - component: {fileID: 224800056171919210}
+  - component: {fileID: 944527532143676582}
   m_Layer: 7
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -682,7 +683,10 @@ MonoBehaviour:
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
+    ModeOverride: 0
     LensShift: {x: 0, y: 0}
+    GateFit: 2
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -708,6 +712,29 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 224800055398142142}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &944527532143676582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224800056171919212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: -1
+  m_Gain: 1
+  m_Use2DDistance: 1
+  m_UseCameraSpace: 0
+  m_ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    m_AmplitudeGain: 0
+    m_FrequencyGain: 0
+    m_Duration: 0
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &224800056730622866
 GameObject:
   m_ObjectHideFlags: 0
