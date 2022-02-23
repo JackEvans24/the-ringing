@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private UnityEvent onShowCharacter;
+    [SerializeField] private UnityEvent onLevelEnd;
 
     private PlayerController player;
     private Dialogue currentDialogue;
@@ -42,11 +44,29 @@ public class DialogueManager : MonoBehaviour
             instance = this;
         }
 
+        DontDestroyOnLoad(this.gameObject);
+
+        this.Reset();
+    }
+
+    private void Reset()
+    {
         this.player = FindObjectOfType<PlayerController>();
+        this.currentDialogue = null;
+        this.awaitingDialogues.Clear();
+        this.awaitingEvents.Clear();
+
+        this.playerCouldMove = false;
+        this.writing = false;
+        this.skipWriting = false;
+        this.isModalOpen = false;
     }
 
     private void Update()
     {
+        if (this.currentDialogue?.Passive != false)
+            return;
+
         var inputs = this.player.InputConverter.CurrentInputs;
         if (inputs.Action)
         {
@@ -102,15 +122,29 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
 
         var ev = awaitingEvents.Dequeue();
-        this.nameText.text = ev.Character;
 
-        yield return ShowLineOfText(ev.Text);
+        switch (ev.Type)
+        {
+            case DialogueEventType.Text:
+                yield return ShowText(ev);
+                break;
+
+            case DialogueEventType.EndOfLevel:
+                yield return this.EndLevel(ev);
+                break;
+        }
 
         if (!this.currentDialogue.Passive)
             yield break;
 
         yield return new WaitForSeconds(this.currentDialogue.PassiveTimeout);
         StartCoroutine(NextEvent());
+    }
+
+    private IEnumerator ShowText(DialogueEvent ev)
+    {
+        this.nameText.text = ev.Character;
+        yield return ShowLineOfText(ev.Text);
     }
 
     private IEnumerator ShowLineOfText(string line)
@@ -176,5 +210,13 @@ public class DialogueManager : MonoBehaviour
         this.currentDialogue = null;
 
         StartCoroutine(this.NextDialog());
+    }
+
+    private IEnumerator EndLevel(DialogueEvent ev)
+    {
+        this.onLevelEnd?.Invoke();
+
+        yield return new WaitForSeconds(ev.NextSceneTimer);
+        SceneManager.LoadScene((int)ev.NextScene);
     }
 }
