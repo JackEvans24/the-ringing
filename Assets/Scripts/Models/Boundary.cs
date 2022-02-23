@@ -10,4 +10,9 @@ public class Boundary : MonoBehaviour
         this.Collider = GetComponent<PolygonCollider2D>();
         BoundaryManager.RegisterBoundary(this);
     }
+
+    private void OnDestroy()
+    {
+        BoundaryManager.Remove(this);
+    }
 }

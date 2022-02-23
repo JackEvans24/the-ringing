@@ -20,4 +20,10 @@ public class CheckpointManager
 
         Instance.CurrentCheckpoint = checkpoint;
     }
+
+    public static void Remove(Checkpoint checkpoint)
+    {
+        if (Instance.CurrentCheckpoint == checkpoint)
+            Instance.CurrentCheckpoint = null;
+    }
 }

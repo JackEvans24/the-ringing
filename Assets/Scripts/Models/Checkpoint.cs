@@ -25,4 +25,9 @@ public class Checkpoint : MonoBehaviour
             this.OnCheckpointSet?.Invoke();
         }
     }
+
+    private void OnDestroy()
+    {
+        CheckpointManager.Remove(this);
+    }
 }

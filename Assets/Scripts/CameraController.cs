@@ -6,25 +6,30 @@ namespace Assets.Scripts
 {
     public class CameraController : MonoBehaviour
     {
-        private static CameraController _instance;
-        public static CameraController Instance { get { return _instance; } }
+        private static CameraController instance;
+        public static CameraController Instance { get { return instance; } }
 
         private CinemachineVirtualCamera[] cameras;
         private Transform currentCameraTranform;
 
         private void Awake()
         {
-            if (_instance != null && _instance != this)
+            if (instance != null && instance != this)
             {
                 Destroy(this.gameObject);
             }
             else
             {
-                _instance = this;
+                instance = this;
             }
         }
 
         private void Start()
+        {
+            this.FindCameras();
+        }
+
+        private void FindCameras()
         {
             this.cameras = FindObjectsOfType<CinemachineVirtualCamera>(true);
         }
@@ -42,12 +47,18 @@ namespace Assets.Scripts
             }
 
             currentCamera.Priority = 1;
+            if (cameras == null)
+                this.FindCameras();
+
             foreach (var camera in cameras.Where(c => c != currentCamera))
-            {
                 camera.Priority = 0;
-            }
 
             this.currentCameraTranform = boundary;
+        }
+
+        private void OnDestroy()
+        {
+            instance = null;
         }
     }
 }

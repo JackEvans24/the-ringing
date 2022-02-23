@@ -35,4 +35,9 @@ public class BoundaryManager
 
         throw new System.Exception("The requested point is outside all boundaries");
     }
+
+    public static void Remove(Boundary self)
+    {
+        Instance.boundaryList.Remove(self);
+    }
 }
