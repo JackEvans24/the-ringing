@@ -20,7 +20,7 @@ public class DoorButton : MonoBehaviour
             return;
 
         StartCoroutine(OpenDoor());
-        //this.activated = true;
+        this.activated = true;
     }
 
     private IEnumerator OpenDoor()
