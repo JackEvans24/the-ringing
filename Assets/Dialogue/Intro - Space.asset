@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
+  m_Name: Intro - Space
+  m_EditorClassIdentifier: 
+  Passive: 0
+  PassiveTimeout: 2
+  Events:
+  - Type: 3
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Transition
+  - Type: 0
+    Character: Autopilot
+    Text: AND THAT'S THE FULL LIST OF MY SECONDARY FUNCTIONS
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 3
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: ShipOuter
+  - Type: 3
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Space
+  - Type: 2
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: ShipInner
+  - Type: 2
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Player
+  - Type: 0
+    Character: Jarett
+    Text: Thank you for that, Autopilot
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 5
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 2
+    DialogueObjectName: 
+  - Type: 4
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 2
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jarett
+    Text: What was that?
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Autopilot
+    Text: WHAT WAS WHAT, JARETT?
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 5
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 1
+    DialogueObjectName: 
+  - Type: 4
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 2
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jarett
+    Text: The ringing noise...
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Autopilot
+    Text: ARE YOU DEFICIENT? DO YOU NEED REST?
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jarett
+    Text: You don't hear that?
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 5
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 1
+    DialogueObjectName: 
+  - Type: 0
+    Character: Autopilot
+    Text: I AM UNSURE WHAT YOU MEAN
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 5
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 1
+    DialogueObjectName: 
+  - Type: 4
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 2
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jarett
+    Text: I'm gonna go see what that is
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 2
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Transition
+  - Type: 1
+    Character: 
+    Text: 
+    NextScene: 1
+    Timeout: 2
+    DialogueObjectName: 

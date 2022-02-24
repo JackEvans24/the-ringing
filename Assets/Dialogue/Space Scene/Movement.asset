@@ -15,13 +15,21 @@ MonoBehaviour:
   Passive: 0
   PassiveTimeout: 1.2
   Events:
+  - Type: 3
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Transition
   - Type: 0
     Character: Autopilot
     Text: YOU CAN USE THE A AND D KEYS TO MOVE
     NextScene: 0
-    NextSceneTimer: 0
+    Timeout: 0
+    DialogueObjectName: 
   - Type: 0
     Character: Jarett
     Text: I know how to move, Autopilot
     NextScene: 0
-    NextSceneTimer: 0
+    Timeout: 0
+    DialogueObjectName: 
