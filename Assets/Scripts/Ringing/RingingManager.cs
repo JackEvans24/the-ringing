@@ -83,6 +83,9 @@ public class RingingManager : MonoBehaviour
 
     private IEnumerator RingAnimation()
     {
+        if (this.currentRingTransform == null)
+            yield break;
+
         if (this.ringing)
             yield break;
         this.ringing = true;

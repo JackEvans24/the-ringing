@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     [HideInInspector] public PlayerInputConverter InputConverter;
 
+    [SerializeField] private bool cutsceneMode;
     [NonSerialized] public bool CanMove;
 
     [SerializeField] private CollisionHelper collisions;
@@ -41,6 +42,9 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        if (this.cutsceneMode)
+            return;
+
         this.Reset();
     }
 
