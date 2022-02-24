@@ -2383,7 +2383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SPACE TO SKIP
+  m_text: SPACE TO CONTINUE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7247f43e3d7914469d5872a549b277c, type: 2}
   m_sharedMaterial: {fileID: 3686737798388593079, guid: d7247f43e3d7914469d5872a549b277c, type: 2}
