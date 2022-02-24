@@ -10,18 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
-  m_Name: Checkpoint
+  m_Name: Crystal 1
   m_EditorClassIdentifier: 
   Passive: 0
-  PassiveTimeout: 1.2
+  PassiveTimeout: 0
   Events:
   - Type: 0
-    Character: Autopilot
-    Text: THESE ARROW SIGNS ARE CHECKPOINTS, IN CASE SOMETHING BAD HAPPENS
+    Character: Jarett
+    Text: This is it! What is this thing, autopilot?
     NextScene: 0
     NextSceneTimer: 0
   - Type: 0
-    Character: Jarett
-    Text: What do you mean, "something bad"?
+    Character: Autopilot
+    Text: I... I DON'T REMEMBER THIS PART OF THIS SHIP
+    NextScene: 0
+    NextSceneTimer: 0
+  - Type: 0
+    Character: Autopilot
+    Text: I WOULDN'T RECOMMEND GOING NEAR IT
     NextScene: 0
     NextSceneTimer: 0

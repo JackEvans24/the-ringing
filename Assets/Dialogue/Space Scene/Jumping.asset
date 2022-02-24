@@ -12,12 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
   m_Name: Jumping
   m_EditorClassIdentifier: 
-  Passive: 1
+  Passive: 0
   PassiveTimeout: 1.2
   Events:
-  - Character: Autopilot
+  - Type: 0
+    Character: Autopilot
     Text: PRESS SPACE TO JUMP
-  - Character: Jarett
+    NextScene: 0
+    NextSceneTimer: 0
+  - Type: 0
+    Character: Jarett
     Text: What does "press space" mean?
-  - Character: Autopilot
+    NextScene: 0
+    NextSceneTimer: 0
+  - Type: 0
+    Character: Autopilot
     Text: I'M NOT TALKING TO YOU
+    NextScene: 0
+    NextSceneTimer: 0

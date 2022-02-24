@@ -12,10 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
   m_Name: Button 1
   m_EditorClassIdentifier: 
-  Passive: 1
+  Passive: 0
   PassiveTimeout: 1.2
   Events:
-  - Character: Jarett
-    Text: Why is this button in a separate room to the door?
-  - Character: Autopilot
-    Text: I DID NOT DESIGN THIS SHIP, JARETT
+  - Type: 0
+    Character: Jarett
+    Text: How do I get down from here? I can hear the ringing below me
+    NextScene: 0
+    NextSceneTimer: 0
+  - Type: 0
+    Character: Autopilot
+    Text: SEE THAT BUTTON ABOVE YOU?
+    NextScene: 0
+    NextSceneTimer: 0
+  - Type: 0
+    Character: Jarett
+    Text: The one in a different room?
+    NextScene: 0
+    NextSceneTimer: 0
+  - Type: 0
+    Character: Autopilot
+    Text: DON'T BE MAD AT ME. I DIDN'T DESIGN THIS SHIP
+    NextScene: 0
+    NextSceneTimer: 0
