@@ -1359,7 +1359,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1471,7 +1471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4974408916439560790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.164835, y: -0.5, z: -10}
+  m_LocalPosition: {x: -2.1740332, y: -0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6167657303980701491}
@@ -1865,6 +1865,7 @@ GameObject:
   - component: {fileID: 4136944710874015055}
   - component: {fileID: 2347229283660235226}
   - component: {fileID: 1157511865992533215}
+  - component: {fileID: 9019551706799312987}
   m_Layer: 5
   m_Name: Blackout Panel
   m_TagString: Untagged
@@ -1907,7 +1908,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5820060594945403482}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -1941,6 +1942,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9019551706799312987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5820060594945403482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d04c7303a4143240ac7bdc688365e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Transition
+  canvas: {fileID: 2347229283660235226}
+  fadeTime: 1
 --- !u!1 &6123144826490211662
 GameObject:
   m_ObjectHideFlags: 0
