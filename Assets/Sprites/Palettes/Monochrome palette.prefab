@@ -3495,6 +3495,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -7, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 402
+      m_TileSpriteIndex: 398
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -5, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -3700,6 +3710,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 58
       m_TileSpriteIndex: 58
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -7, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 401
+      m_TileSpriteIndex: 397
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3915,6 +3935,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -7, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 400
+      m_TileSpriteIndex: 396
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 2147483650
   - first: {x: -5, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -4126,6 +4156,14 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   m_AnimatedTiles:
+  - first: {x: -7, y: 0, z: 0}
+    second:
+      m_AnimatedSprites:
+      - {fileID: 7253652341725546674, guid: 5a0d603c72c4df844895b35f61cd51ce, type: 3}
+      - {fileID: -5416222786248885519, guid: 5a0d603c72c4df844895b35f61cd51ce, type: 3}
+      m_AnimationSpeed: 1
+      m_AnimationTimeOffset: 0
+      m_IsLooping: 1
   - first: {x: -5, y: 0, z: 0}
     second:
       m_AnimatedSprites:
@@ -4935,8 +4973,12 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 573fb32e62277524ea39a77fb207cb39, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 5d3a9fbc0a6eaf646870b419fa60204f, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: f5a63232ca4dc8a41af8970fe29ff252, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: f0cb778e64b7409408e5a4be25c1a132, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 8d87026101b8e884f95d1f3d8004ff32, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 386844166813859994, guid: 1393baba8140bc148922c63f162c6dcd, type: 3}
@@ -5730,8 +5772,14 @@ Tilemap:
     m_Data: {fileID: 3954232572960974673, guid: 1393baba8140bc148922c63f162c6dcd, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1990650894296629154, guid: 1393baba8140bc148922c63f162c6dcd, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 7253652341725546674, guid: 5a0d603c72c4df844895b35f61cd51ce, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 8515913454031941174, guid: 5a0d603c72c4df844895b35f61cd51ce, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -8640904000706516434, guid: 5a0d603c72c4df844895b35f61cd51ce, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 401
+  - m_RefCount: 404
     m_Data:
       e00: 1
       e01: 0
@@ -5804,13 +5852,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 404
+  - m_RefCount: 407
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -6, y: -19, z: 0}
-  m_Size: {x: 26, y: 20, z: 1}
+  m_Origin: {x: -7, y: -19, z: 0}
+  m_Size: {x: 27, y: 20, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -5878,7 +5926,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &4655182464792911735
+--- !u!114 &7939811953279536839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
