@@ -11,6 +11,9 @@ namespace Assets.Scripts.Models.Player
         [NonSerialized] public CollisionHelper Collisions;
         [NonSerialized] public bool CanMove;
 
+        [Header("Animation")]
+        [SerializeField] private Animator animator;
+
         [Header("Velocities")]
         [SerializeField] private float horizontalVelocity = 5f;
         [SerializeField] private float upwardVelocity = 6f;
@@ -124,6 +127,9 @@ namespace Assets.Scripts.Models.Player
 
         public void UpdateSprite(SpriteRenderer sprite)
         {
+            this.animator.SetFloat("Speed", Mathf.Abs(this.currentHorizontalVelocity));
+            this.animator.SetBool("Grounded", this.isGrounded);
+
             if (this.IsFacingLeft == this.spriteIsFacingLeft)
                 return;
 
