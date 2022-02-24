@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private CanvasGroup canvas;
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TMP_Text promptText;
 
     [Header("Variables")]
     [SerializeField] private float characterWaitTime = 0.05f;
@@ -68,7 +69,7 @@ public class DialogueManager : MonoBehaviour
             return;
 
         var inputs = this.player.InputConverter.CurrentInputs;
-        if (inputs.Action)
+        if (inputs.StartJump)
         {
             if (writing)
                 skipWriting = true;
@@ -101,6 +102,8 @@ public class DialogueManager : MonoBehaviour
             this.playerCouldMove = this.player.CanMove;
             this.player.CanMove = false;
         }
+
+        this.promptText.alpha = this.currentDialogue.Passive ? 0 : 1;
 
         this.awaitingEvents.Clear();
         foreach (var ev in this.currentDialogue.Events)
