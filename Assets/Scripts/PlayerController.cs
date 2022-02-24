@@ -1,4 +1,3 @@
-using Assets.Scripts.Constants;
 using Assets.Scripts.Helpers;
 using Assets.Scripts.Models;
 using Assets.Scripts.Models.Player;
@@ -108,6 +107,7 @@ public class PlayerController : MonoBehaviour
     private void Reset()
     {
         this.transform.position = CheckpointManager.Instance.CurrentCheckpoint.transform.position;
+
         this.CanMove = true;
 
         this.movement.Reset();
