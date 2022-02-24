@@ -119,16 +119,21 @@ public class DialogueEditor : Editor
 
         GUILayout.EndHorizontal();
 
-        if (ev.Type == DialogueEventType.EndOfLevel)
+        GUILayout.BeginHorizontal();
+        GUILayout.Space(28);
+
+        switch (ev.Type)
         {
-            GUILayout.BeginHorizontal();
-
-            GUILayout.Space(28);
-            EditorGUILayout.PropertyField(prop.FindPropertyRelative(nameof(DialogueEvent.NextSceneTimer)));
-
-            GUILayout.EndHorizontal();
+            case DialogueEventType.Text:
+                EditorGUILayout.PropertyField(prop.FindPropertyRelative(nameof(DialogueEvent.Character)));
+                break;
+            case DialogueEventType.EndOfLevel:
+                EditorGUILayout.PropertyField(prop.FindPropertyRelative(nameof(DialogueEvent.NextSceneTimer)));
+                break;
         }
 
+        GUILayout.EndHorizontal();
+        
         GUILayout.Space(10);
 
         return true;
