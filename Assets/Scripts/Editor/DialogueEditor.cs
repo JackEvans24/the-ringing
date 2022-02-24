@@ -115,6 +115,14 @@ public class DialogueEditor : Editor
             case DialogueEventType.EndOfLevel:
                 EditorGUILayout.PropertyField(prop.FindPropertyRelative(nameof(DialogueEvent.NextScene)));
                 break;
+            case DialogueEventType.ShowObject:
+            case DialogueEventType.HideObject:
+                EditorGUILayout.PropertyField(prop.FindPropertyRelative(nameof(DialogueEvent.DialogueObjectName)));
+                break;
+            case DialogueEventType.Ring:
+            case DialogueEventType.Wait:
+                EditorGUILayout.PropertyField(prop.FindPropertyRelative(nameof(DialogueEvent.Timeout)));
+                break;
         }
 
         GUILayout.EndHorizontal();
@@ -128,8 +136,9 @@ public class DialogueEditor : Editor
                 EditorGUILayout.PropertyField(prop.FindPropertyRelative(nameof(DialogueEvent.Character)));
                 break;
             case DialogueEventType.EndOfLevel:
-                EditorGUILayout.PropertyField(prop.FindPropertyRelative(nameof(DialogueEvent.NextSceneTimer)));
+                EditorGUILayout.PropertyField(prop.FindPropertyRelative(nameof(DialogueEvent.Timeout)));
                 break;
+
         }
 
         GUILayout.EndHorizontal();

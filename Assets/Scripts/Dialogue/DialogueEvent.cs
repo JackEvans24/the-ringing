@@ -8,11 +8,17 @@ public class DialogueEvent
     public string Character;
     [TextArea(1, 4)] public string Text;
     public Scenes NextScene;
-    public float NextSceneTimer;
+    public float Timeout;
+    public string DialogueObjectName;
 }
 
 public enum DialogueEventType
 {
     Text,
-    EndOfLevel
+    EndOfLevel,
+    ShowObject,
+    HideObject,
+    Ring,
+    Wait,
+    HideBubble
 }

@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     private static DialogueManager instance;
     public static DialogueManager Instance { get => instance; }
 
+
     [Header("References")]
     [SerializeField] private CanvasGroup canvas;
     [SerializeField] private TMP_Text nameText;
@@ -27,8 +28,10 @@ public class DialogueManager : MonoBehaviour
 
     private PlayerController player;
     private Dialogue currentDialogue;
+    private DialogueEvent currentEvent;
     private Queue<Dialogue> awaitingDialogues = new Queue<Dialogue>();
     private Queue<DialogueEvent> awaitingEvents = new Queue<DialogueEvent>();
+    private Dictionary<string, DialogueObject> dialogueObjects = new Dictionary<string, DialogueObject>();
 
     private bool playerCouldMove;
     private bool writing, skipWriting;
@@ -54,8 +57,10 @@ public class DialogueManager : MonoBehaviour
     {
         this.player = FindObjectOfType<PlayerController>();
         this.currentDialogue = null;
+        this.currentEvent = null;
         this.awaitingDialogues.Clear();
         this.awaitingEvents.Clear();
+        this.dialogueObjects.Clear();
 
         this.playerCouldMove = false;
         this.writing = false;
@@ -67,6 +72,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (this.currentDialogue?.Passive != false)
             return;
+        if (this.currentEvent?.Type != DialogueEventType.Text)
+            return;
 
         var inputs = this.player.InputConverter.CurrentInputs;
         if (inputs.StartJump)
@@ -76,6 +83,14 @@ public class DialogueManager : MonoBehaviour
             else
                 StartCoroutine(NextEvent());
         }
+    }
+
+    public void RegisterObject(DialogueObject dialogueObject)
+    {
+        if (this.dialogueObjects.ContainsKey(dialogueObject.Name))
+            return;
+
+        this.dialogueObjects.Add(dialogueObject.Name, dialogueObject);
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -97,7 +112,7 @@ public class DialogueManager : MonoBehaviour
 
         this.currentDialogue = this.awaitingDialogues.Dequeue();
 
-        if (!this.currentDialogue.Passive)
+        if (!this.currentDialogue.Passive && this.player != null)
         {
             this.playerCouldMove = this.player.CanMove;
             this.player.CanMove = false;
@@ -125,6 +140,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
 
         var ev = awaitingEvents.Dequeue();
+        this.currentEvent = ev;
 
         switch (ev.Type)
         {
@@ -135,12 +151,35 @@ public class DialogueManager : MonoBehaviour
             case DialogueEventType.EndOfLevel:
                 yield return this.EndLevel(ev);
                 break;
+
+            case DialogueEventType.HideBubble:
+                yield return this.CloseDialogBox();
+                break;
+
+            case DialogueEventType.ShowObject:
+                yield return this.ShowObject(ev);
+                break;
+
+            case DialogueEventType.HideObject:
+                yield return this.HideObject(ev);
+                break;
+
+            case DialogueEventType.Ring:
+                RingingManager.Ring();
+                yield return AwaitTimeout(ev);
+                break;
+
+            case DialogueEventType.Wait:
+                yield return AwaitTimeout(ev);
+                break;
+
         }
 
-        if (!this.currentDialogue.Passive)
+        if (this.currentDialogue.Passive)
+            yield return new WaitForSeconds(this.currentDialogue.PassiveTimeout);
+        else if (ev.Type == DialogueEventType.Text)
             yield break;
 
-        yield return new WaitForSeconds(this.currentDialogue.PassiveTimeout);
         StartCoroutine(NextEvent());
     }
 
@@ -211,6 +250,7 @@ public class DialogueManager : MonoBehaviour
             player.CanMove = this.playerCouldMove;
 
         this.currentDialogue = null;
+        this.currentEvent = null;
 
         StartCoroutine(this.NextDialog());
     }
@@ -219,7 +259,28 @@ public class DialogueManager : MonoBehaviour
     {
         this.onLevelEnd?.Invoke();
 
-        yield return new WaitForSeconds(ev.NextSceneTimer);
+        yield return AwaitTimeout(ev);
         SceneManager.LoadScene((int)ev.NextScene);
+    }
+
+    private IEnumerator AwaitTimeout(DialogueEvent ev)
+    {
+        yield return new WaitForSeconds(ev.Timeout);
+    }
+
+    private IEnumerator ShowObject(DialogueEvent ev)
+    {
+        if (!this.dialogueObjects.TryGetValue(ev.DialogueObjectName, out var obj))
+            yield break;
+
+        yield return obj.Show();
+    }
+
+    private IEnumerator HideObject(DialogueEvent ev)
+    {
+        if (!this.dialogueObjects.TryGetValue(ev.DialogueObjectName, out var obj))
+            yield break;
+
+        yield return obj.Hide();
     }
 }
