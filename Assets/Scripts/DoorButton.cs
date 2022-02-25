@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class DoorButton : MonoBehaviour
 {
     [Header("Reference")]
-    [SerializeField] private Collider2D doorContainer;
+    [SerializeField] private Collider2D[] doorContainers;
 
     [Header("Effect")]
     [SerializeField] private float tileTiming = 0.8f;
@@ -16,23 +16,29 @@ public class DoorButton : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (activated || !collision.CompareTag(Tags.PLAYER))
+        if (this.activated || !collision.CompareTag(Tags.PLAYER))
             return;
 
-        StartCoroutine(OpenDoor());
         this.activated = true;
+        StartCoroutine(OpenDoor());
     }
 
     private IEnumerator OpenDoor()
     {
-        doorContainer.enabled = false;
-
-        foreach (Transform tile in doorContainer.transform)
+        foreach (var door in this.doorContainers)
         {
-            tile.gameObject.SetActive(false);
-            this.onTileOpened?.Invoke();
+            door.enabled = false;
 
-            yield return new WaitForSeconds(tileTiming);
+            foreach (Transform tile in door.transform)
+            {
+                if (!tile.gameObject.activeInHierarchy)
+                    continue;
+
+                tile.gameObject.SetActive(false);
+                this.onTileOpened?.Invoke();
+
+                yield return new WaitForSeconds(tileTiming);
+            }
         }
     }
 }
