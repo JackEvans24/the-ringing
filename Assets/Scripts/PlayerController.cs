@@ -28,6 +28,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float deathResetDelay = 2f;
     private bool resetting = false;
 
+    public void EnableDash()
+    {
+        this.movement.DashEnabled = true;
+    }
+
     private void Awake()
     {
         this.rb = GetComponent<Rigidbody2D>();

@@ -62,7 +62,7 @@ namespace Assets.Scripts.Models.Player
         private float currentRecoilTime;
 
         [Header("Dash")]
-        [SerializeField] private bool dashEnabled = true;
+        [SerializeField] public bool DashEnabled = true;
         [SerializeField] private float dashVelocity = 10f;
         [SerializeField] private float dashDuration = 0.8f;
         [SerializeField] private AnimationCurve dashCurve;
@@ -198,7 +198,7 @@ namespace Assets.Scripts.Models.Player
         private void CheckDash(bool dash)
         {
             // If dashing not enabled, return
-            if (!this.dashEnabled || !this.CanMove || this.isDead)
+            if (!this.DashEnabled || !this.CanMove || this.isDead)
             {
                 this.isDashing = false;
                 this.currentDashTime = 0f;
