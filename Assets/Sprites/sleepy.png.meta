@@ -4,16 +4,7 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 913099545416652681
-    second: sleepy_0
-  - first:
-      213: -4735356204235191010
-    second: sleepy_1
-  - first:
-      213: 4305892451773780996
-    second: sleepy_2
-  - first:
-      213: -478275675314483302
-    second: sleepy_3
+    second: bed
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,15 +118,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sleepy_0
+      name: bed
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
+        y: 0
+        width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,77 +134,6 @@ TextureImporter:
       bones: []
       spriteID: 9875121e23bfbac00800000000000000
       internalID: 913099545416652681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sleepy_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1d8e990f92a84eb0800000000000000
-      internalID: -4735356204235191010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sleepy_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: 5}
-        - {x: -8, y: 3}
-        - {x: 8, y: 3}
-        - {x: 8, y: 5}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 404130d0f5a91cb30800000000000000
-      internalID: 4305892451773780996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sleepy_3
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: 5}
-        - {x: -8, y: 3}
-        - {x: 8, y: 3}
-        - {x: 8, y: 5}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9f8b2caec2dc59f0800000000000000
-      internalID: -478275675314483302
       vertices: []
       indices: 
       edges: []
