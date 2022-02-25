@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4632179313165233064}
   m_Layer: 0
-  m_Name: Look Ahead
+  m_Name: _Look Ahead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,7 +2,12 @@
 {
     public enum Scenes
     {
+        Menu,
         SpaceIntro,
-        Space
+        Space,
+        GrassyIntro,
+        Grassy,
+        Outro,
+        Credits
     }
 }

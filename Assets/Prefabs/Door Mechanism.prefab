@@ -533,7 +533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9a8cbc2e020b14586d3ef4fd088bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorContainer: {fileID: 2127763792270614174}
+  doorContainers:
+  - {fileID: 2127763792270614174}
   tileTiming: 0.8
   onTileOpened:
     m_PersistentCalls:

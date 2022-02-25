@@ -186,6 +186,6 @@ MonoBehaviour:
   - Type: 1
     Character: 
     Text: 
-    NextScene: 1
+    NextScene: 2
     Timeout: 2
     DialogueObjectName: 

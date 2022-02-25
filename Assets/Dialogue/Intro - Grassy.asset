@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
+  m_Name: Intro - Grassy
+  m_EditorClassIdentifier: 
+  Passive: 0
+  PassiveTimeout: 2
+  Events:
+  - Type: 3
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Transition
+  - Type: 0
+    Character: Jarett
+    Text: Ugh... what happened...
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 2
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Fairy
+  - Type: 5
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 1
+    DialogueObjectName: 
+  - Type: 0
+    Character: Fairy
+    Text: There you are!
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jarett
+    Text: ...what?
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Fairy
+    Text: You fell a long way! I'm glad you're not dead! Hahaa!!
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 4
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 3
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jarett
+    Text: That ringing...
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Fairy
+    Text: Are you okay, Jaralt? Still woozy?
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jarett
+    Text: Jaralt? My name is.. was... Jarett...
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Fairy
+    Text: Hahaa!! You're funny when you're hurt!
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 4
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 2
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jaralt?
+    Text: I gotta go find that...
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 2
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Transition
+  - Type: 1
+    Character: 
+    Text: 
+    NextScene: 4
+    Timeout: 1
+    DialogueObjectName: 
