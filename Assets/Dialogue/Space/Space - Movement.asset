@@ -10,13 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
-  m_Name: Down
+  m_Name: Space - Movement
   m_EditorClassIdentifier: 
   Passive: 0
   PassiveTimeout: 1.2
   Events:
+  - Type: 3
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Transition
   - Type: 0
     Character: Autopilot
-    Text: YOU CAN DROP THROUGH THIN PLATFORMS BY PRESSING DOWN
+    Text: YOU CAN USE THE A AND D KEYS TO MOVE
     NextScene: 0
-    NextSceneTimer: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jarett
+    Text: I know how to move, Autopilot
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 

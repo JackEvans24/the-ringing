@@ -10,23 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
-  m_Name: Crystal 1
+  m_Name: Space - Crystal 2
   m_EditorClassIdentifier: 
   Passive: 0
   PassiveTimeout: 0
   Events:
   - Type: 0
+    Character: Autopilot
+    Text: -BZZZZT-
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
     Character: Jarett
-    Text: This is it! What is this thing, autopilot?
+    Text: Oh man, I don't feel so fresh...
     NextScene: 0
-    NextSceneTimer: 0
-  - Type: 0
-    Character: Autopilot
-    Text: I... I DON'T REMEMBER THIS PART OF THIS SHIP
-    NextScene: 0
-    NextSceneTimer: 0
-  - Type: 0
-    Character: Autopilot
-    Text: I WOULDN'T RECOMMEND GOING NEAR IT
-    NextScene: 0
-    NextSceneTimer: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 1
+    Character: Jarett
+    Text: Oh man, I don't feel so fresh...
+    NextScene: 3
+    Timeout: 2
+    DialogueObjectName: 

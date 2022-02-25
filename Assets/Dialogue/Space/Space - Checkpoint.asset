@@ -10,12 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
-  m_Name: Spikes 2
+  m_Name: Space - Checkpoint
   m_EditorClassIdentifier: 
-  Passive: 1
+  Passive: 0
   PassiveTimeout: 1.2
   Events:
-  - Character: Jarett
-    Text: What do we even need spikes for?
-  - Character: Autopilot
-    Text: YOU'RE WORRYING A LOT ABOUT THE SPIKES
+  - Type: 0
+    Character: Autopilot
+    Text: THESE ARROW SIGNS ARE CHECKPOINTS, IN CASE SOMETHING BAD HAPPENS
+    NextScene: 0
+    NextSceneTimer: 0
+  - Type: 0
+    Character: Jarett
+    Text: What do you mean, "something bad"?
+    NextScene: 0
+    NextSceneTimer: 0

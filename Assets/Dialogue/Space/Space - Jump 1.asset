@@ -10,26 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
-  m_Name: Crystal 2
+  m_Name: Space - Jump 1
   m_EditorClassIdentifier: 
   Passive: 0
-  PassiveTimeout: 0
+  PassiveTimeout: 1.2
   Events:
   - Type: 0
     Character: Autopilot
-    Text: -BZZZZT-
+    Text: PRESS SPACE TO JUMP
     NextScene: 0
-    Timeout: 0
-    DialogueObjectName: 
+    NextSceneTimer: 0
   - Type: 0
     Character: Jarett
-    Text: Oh man, I don't feel so fresh...
+    Text: What does "press space" mean?
     NextScene: 0
-    Timeout: 0
-    DialogueObjectName: 
-  - Type: 1
-    Character: Jarett
-    Text: Oh man, I don't feel so fresh...
-    NextScene: 1
-    Timeout: 2
-    DialogueObjectName: 
+    NextSceneTimer: 0
+  - Type: 0
+    Character: Autopilot
+    Text: I'M NOT TALKING TO YOU
+    NextScene: 0
+    NextSceneTimer: 0
