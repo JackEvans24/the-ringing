@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2afd6513c788f47b69f3449b54f5a7, type: 3}
+  m_Name: Outro
+  m_EditorClassIdentifier: 
+  Passive: 0
+  PassiveTimeout: 2
+  Events:
+  - Type: 3
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Transition
+  - Type: 0
+    Character: Jaralt
+    Text: Ugh... Where am I?
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Doctor
+    Text: Hey Jerry, take it easy
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Doctor
+    Text: You had a carbon monoxide leak in your flat
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Doctor
+    Text: But you're gonna be okay
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jerry
+    Text: Jerry? That sounds right...
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Jerry
+    Text: Wow, I had some crazy dreams. I guess none of it was real...
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Doctor
+    Text: Carbon monoxide poisoning will do that to you
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 0
+    Character: Doctor
+    Text: Just rest up and we'll get you out of here soon
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 6
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: 
+  - Type: 2
+    Character: 
+    Text: 
+    NextScene: 0
+    Timeout: 0
+    DialogueObjectName: Transition
+  - Type: 1
+    Character: 
+    Text: 
+    NextScene: 6
+    Timeout: 1
+    DialogueObjectName: 
